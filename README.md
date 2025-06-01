@@ -2,7 +2,7 @@
 
 A sleek and efficient ToDo List application built with React. It allows users to manage daily tasks easily with features like filtering, sorting, editing, and persisting data in the browser.
 
-> 🔗 **Live App:** [Click her to see demo:](https://gitanjali-yadav.github.io/Todo-app)
+> 🔗 **Live App:** [Click her to see demo](https://gitanjali-yadav.github.io/Todo-app)
 
 ---
 
