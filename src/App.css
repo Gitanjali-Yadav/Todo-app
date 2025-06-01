@@ -3,49 +3,54 @@ body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex;                    /* Center the app vertically and horizontally */
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #0f0f0f; /* dark background */
-  color: #e5d4ff;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;               /* Full viewport height */
+  background-color: #0f0f0f;       /* Dark background */
+  color: #e5d4ff;                  /* Light text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transitions */
 }
 
+/* Main app container */
 .App {
-  /* padding: 20px; */
-  border: 2px solid #9333ea;   /* purple border */
-  border-radius: 20px;
-  background-color: #1a1a1a;   /* dark background */
-  /* box-shadow: 0 12px 40px rgba(147, 51, 234, 0.3); */
-  box-shadow: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 520px;
-  margin: 40px auto;
-  padding: 15px;
+  /* padding: 20px; */             /* Padding commented out */
+  border: 2px solid #9333ea;       /* Purple border */
+  border-radius: 20px;             /* Rounded corners */
+  background-color: #1a1a1a;       /* Slightly lighter dark background */
+  /* box-shadow: 0 12px 40px rgba(147, 51, 234, 0.3); */ /* Optional shadow */
+  box-shadow: white;               /* White shadow for subtle glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+  max-width: 520px;                /* Max width for larger screens */
+  margin: 40px auto;               /* Center horizontally with margin on top and bottom */
+  padding: 15px;                  /* Inner spacing */
 }
 
+/* Hover effect on main app container */
 .App:hover {
-  transform: scale(1.01);
-  box-shadow: 0 16px 48px rgba(147, 51, 234, 0.4);
+  transform: scale(1.01);          /* Slightly enlarge on hover */
+  box-shadow: 0 16px 48px rgba(147, 51, 234, 0.4); /* Enhanced purple glow */
 }
 
+/* Container for todo input and controls */
 .todo-container {
   width: 90%;
   max-width: 520px;
   padding: 40px 28px;
   border-radius: 20px;
   background-color: transparent;
-  box-sizing: border-box;
+  box-sizing: border-box;          /* Include padding in width/height */
 }
 
+/* Main title styling */
 h1 {
   text-align: center;
   margin-bottom: 28px;
   font-size: 26px;
-  color: #e9d5ff;
+  color: #e9d5ff;                  /* Light purple text */
 }
 
+/* Layout for the first div inside todo-container (input + buttons) */
 .todo-container > div:first-of-type {
   display: flex;
   flex-wrap: wrap;
@@ -53,17 +58,19 @@ h1 {
   margin-bottom: 25px;
 }
 
+/* Text input styling */
 input[type="text"] {
-  flex: 1;
+  flex: 1;                        /* Take up remaining space */
   min-width: 200px;
   padding: 14px 16px;
-  border-radius: 12px;
-  border: 1px solid #7c3aed;
+  border-radius: 12px;            /* Rounded edges */
+  border: 1px solid #7c3aed;      /* Purple border */
   font-size: 16px;
-  background-color: #2e1065;
-  color: #f3e8ff;
+  background-color: #2e1065;      /* Dark purple background */
+  color: #f3e8ff;                 /* Light text */
 }
 
+/* Generic button styling */
 button {
   padding: 12px 20px;
   font-size: 14px;
@@ -71,52 +78,59 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  background-color: #7c3aed;
-  color: #f3e8ff;
+  background-color: #7c3aed;      /* Purple background */
+  color: #f3e8ff;                 /* Light text */
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Button hover effect */
 button:hover {
-  background-color: #6b21a8;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+  background-color: #6b21a8;      /* Darker purple */
+  transform: translateY(-1px);    /* Slight lift */
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4); /* Enhanced shadow */
 }
 
+/* Button active/click effect */
 button:active {
-  transform: scale(0.98);
+  transform: scale(0.98);         /* Slight shrink on click */
 }
 
+/* Unordered list styles */
 ul {
-  list-style: none;
+  list-style: none;               /* Remove bullets */
   padding: 0;
   margin-top: 20px;
 }
 
+/* Individual task list item */
 li {
   padding: 14px 16px;
-  border: 1px solid #5b21b6;
-  background-color: #2e1065;
+  border: 1px solid #5b21b6;     /* Dark purple border */
+  background-color: #2e1065;     /* Dark purple background */
   border-radius: 10px;
-  display: flex;
+  display: flex;                 /* Flex layout for content and delete button */
   justify-content: space-between;
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
 }
 
+/* Task text styling */
 li span {
-  flex-grow: 1;
+  flex-grow: 1;                  /* Take available space */
   font-size: 16px;
   cursor: pointer;
-  color: #f5f3ff;
+  color: #f5f3ff;               /* Light text */
 }
 
+/* Completed task text styling */
 li span.completed {
-  text-decoration: line-through;
-  color: #a78bfa;
+  text-decoration: line-through; /* Strike-through for completed tasks */
+  color: #a78bfa;                /* Lighter purple */
 }
 
+/* Controls container (filters and sort dropdowns) */
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -125,72 +139,85 @@ li span.completed {
   margin: 25px 0;
 }
 
+/* Dropdown select styling */
 select {
   padding: 12px 14px;
   font-size: 14px;
-  border: 1px solid #a855f7;
+  border: 1px solid #a855f7;     /* Light purple border */
   border-radius: 12px;
-  background-color: #3b0764;
-  color: #e9d5ff;
+  background-color: #3b0764;     /* Dark purple background */
+  color: #e9d5ff;                /* Light purple text */
   cursor: pointer;
   min-width: 160px;
-  box-shadow: 0 1px 5px rgba(124, 58, 237, 0.1);
+  box-shadow: 0 1px 5px rgba(124, 58, 237, 0.1); /* Subtle shadow */
 }
 
+/* Dropdown hover effect */
 select:hover {
-  background-color: #5b21b6;
+  background-color: #5b21b6;     /* Slightly lighter purple */
 }
 
+/* Theme toggle button container */
 .theme-toggle {
   margin-top: 10px;
   text-align: center;
 }
 
+/* Theme toggle button styling */
 .theme-toggle button {
-  background-color: #9333ea;
-  color: #f3e8ff;
+  background-color: #9333ea;     /* Purple background */
+  color: #f3e8ff;                /* Light text */
 }
 
+/* Clear completed tasks button */
 .clear-completed-btn {
-  background-color: #4c1d95;
+  background-color: #4c1d95;     /* Dark purple */
   color: #e9d5ff;
 }
 
+/* Hover effect for clear completed button */
 .clear-completed-btn:hover {
-  background-color: #7e22ce;
+  background-color: #7e22ce;     /* Lighter purple */
 }
 
+/* Download button styling */
 .download-btn {
-  background-color: #5b21b6;
+  background-color: #5b21b6;     /* Dark purple */
   color: #e9d5ff;
 }
 
+/* Hover effect for download button */
 .download-btn:hover {
-  background-color: #6b21a8;
+  background-color: #6b21a8;     /* Lighter purple */
 }
 
+/* Responsive styling for small screens */
 @media (max-width: 480px) {
   .todo-container {
     padding: 24px;
     margin: 20px;
   }
 
+  /* Make inputs, selects, and buttons full width */
   input[type="text"],
   select,
   button {
     width: 100%;
   }
 
+  /* Stack list items vertically */
   li {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  /* Position delete button to the right */
   li button {
     align-self: flex-end;
     margin-top: 6px;
   }
 
+  /* Stack controls vertically */
   .controls {
     flex-direction: column;
     align-items: stretch;
